@@ -45,7 +45,7 @@ class OddModifier extends Observer {
   }
 }
 
-class Looper extends Subject {
+class Logger extends Subject {
   constructor(start, end) {
     super();
     this.start = start;
@@ -63,6 +63,6 @@ class Looper extends Subject {
   }
 }
 
-const logger = new Looper(1, 1000);
-logger.addObserver(new OddModifier());
-logger.run();
+const l = new Logger(1, 1000);
+l.addObserver(new OddModifier());
+l.run();
